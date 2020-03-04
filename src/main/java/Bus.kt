@@ -4,4 +4,11 @@ class Bus (destination: String, capacity: Int) {
     val capacity: Int = capacity
     var passengers: ArrayList<Person> = ArrayList()
 
+    fun countPassengers(): Int {
+        return passengers.size
+    }
+
+    fun addPassenger(person: Person) {
+        passengers.add(person)
+    }
 }

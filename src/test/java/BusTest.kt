@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions.*
 internal class BusTest {
 
     val bus = Bus("Buchanan Bus Station", 10)
+    val person = Person("Gregor")
 
     @Test
     fun getDestination() {
@@ -24,6 +25,12 @@ internal class BusTest {
 
     @Test
     fun busStartsEmpty() {
-        assertEquals(0, bus.passengers.size)
+        assertEquals(0, bus.countPassengers())
+    }
+
+    @Test
+    fun canAddPassengerToBus() {
+        bus.addPassenger(person)
+        assertEquals(1, bus.countPassengers())
     }
 }
