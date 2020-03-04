@@ -9,6 +9,12 @@ class Bus (destination: String, capacity: Int) {
     }
 
     fun addPassenger(person: Person) {
-        passengers.add(person)
+        if (countPassengers() < capacity) {
+            passengers.add(person)
+        }
+    }
+
+    fun removePassenger() {
+        passengers.removeAt(0)
     }
 }
