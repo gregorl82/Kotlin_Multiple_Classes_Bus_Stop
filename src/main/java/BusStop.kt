@@ -6,4 +6,8 @@ class BusStop (name: String) {
     fun countQueue(): Int {
         return queue.size
     }
+
+    fun addPersonToQueue(person: Person) {
+        queue.add(person)
+    }
 }

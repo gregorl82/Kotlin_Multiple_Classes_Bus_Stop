@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions.*
 internal class BusStopTest {
 
     val busStop = BusStop("Buchanan Bus Station")
+    val person = Person("John")
 
     @Test
     fun getName() {
@@ -14,5 +15,11 @@ internal class BusStopTest {
     @Test
     fun queueStartsEmpty() {
         assertEquals(0, busStop.countQueue())
+    }
+
+    @Test
+    fun addPersonToQueue() {
+        busStop.addPersonToQueue(person)
+        assertEquals(1, busStop.countQueue())
     }
 }
