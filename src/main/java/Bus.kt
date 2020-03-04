@@ -17,4 +17,10 @@ class Bus (destination: String, capacity: Int) {
     fun removePassenger() {
         passengers.removeAt(0)
     }
+
+    fun pickUp(busStop: BusStop) {
+        if (countPassengers() < capacity) {
+            addPassenger(busStop.removePersonFromQueue())
+        }
+    }
 }
