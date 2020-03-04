@@ -21,4 +21,9 @@ internal class BusTest {
     fun getCapacity() {
         assertEquals(10, bus.capacity)
     }
+
+    @Test
+    fun busStartsEmpty() {
+        assertEquals(0, bus.passengers.size)
+    }
 }
