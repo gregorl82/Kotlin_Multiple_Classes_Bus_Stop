@@ -10,4 +10,8 @@ class BusStop (name: String) {
     fun addPersonToQueue(person: Person) {
         queue.add(person)
     }
+
+    fun removePersonFromQueue(): Person {
+        return queue.removeAt(0)
+    }
 }

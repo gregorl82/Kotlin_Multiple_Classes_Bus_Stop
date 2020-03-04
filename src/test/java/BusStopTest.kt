@@ -22,4 +22,13 @@ internal class BusStopTest {
         busStop.addPersonToQueue(person)
         assertEquals(1, busStop.countQueue())
     }
+
+    @Test
+    fun removePersonFromQueue() {
+        busStop.addPersonToQueue(person)
+        busStop.addPersonToQueue(person)
+        val removedPassenger: Person = busStop.removePersonFromQueue()
+        assertEquals(1, busStop.countQueue())
+        assertEquals(person, removedPassenger)
+    }
 }
